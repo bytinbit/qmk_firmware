@@ -34,7 +34,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BONE] = LAYOUT(
         LALT(KC_TAB), KC_J, KC_D, KC_U, KC_A, KC_X,                             KC_P, KC_H, KC_L, KC_M, KC_W, KC_CAPS, 
         KC_TAB, KC_C, KC_T, KC_I, KC_E, KC_O,                                   KC_B, KC_N, KC_R, KC_S, KC_G, KC_Q, 
-        MO(1), KC_F, KC_V, KC_LBRC, KC_QUOT, KC_SCLN, KC_NO, MO(3),             KC_APP, KC_LGUI, KC_Z, KC_Y, KC_COMM, KC_DOT, KC_K, MO(1), 
+        MO(1), KC_F, KC_V, KC_LBRC, KC_QUOT, KC_SCLN, KC_APP, MO(3),            MO(3), KC_LGUI, KC_Z, KC_Y, KC_COMM, KC_DOT, KC_K, MO(1), 
         MO(2), KC_LCTL, KC_SPC, KC_LSFT, MT(MOD_LALT, KC_ESC),                  KC_ENT, KC_RSFT, KC_BSPC, KC_RCTL, KC_DEL),
 
 
@@ -46,17 +46,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 
     [_NUMBERNAV] = LAYOUT(
-        KC_NO, KC_1, KC_2, KC_3, KC_4, KC_5, KC_HOME, KC_6, KC_7, KC_8, KC_9, KC_NO, 
-        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_END, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_0, 
-        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_PGUP, KC_NO, KC_COMM, KC_DOT, KC_NO, KC_NO, 
-        KC_TRNS, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_PGDN, KC_NO, KC_NO),
+        KC_NO, KC_NO, KC_7, KC_8, KC_9, KC_NO,                KC_HOME, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, 
+        KC_NO, KC_NO, KC_4, KC_5, KC_6, KC_NO,           KC_END, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_NO, 
+        KC_NO, KC_NO, KC_1, KC_2, KC_3, KC_NO,           KC_NO, KC_NO, KC_NO, KC_NO, KC_PGUP, KC_NO, KC_COMM, KC_DOT, KC_NO, KC_NO, 
+        KC_TRNS, KC_0, KC_DOT, KC_COMM, KC_SLSH,                KC_NO, KC_NO, KC_PGDN, KC_NO, KC_NO),
 
 
     [_FKEYS] = LAYOUT(
-        KC_NO, RGB_SPI, RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI, KC_NO, KC_F1, KC_F2, KC_F3, KC_F4, KC_NO, 
-        KC_NO, RGB_SPD, RGB_RMOD, RGB_HUD, RGB_SAD, RGB_VAD, KC_NO, KC_F5, KC_F6, KC_F7, KC_F8, KC_NO, 
-        KC_NO, RGB_M_P, RGB_M_B, RGB_M_R, RGB_M_G, RGB_M_T, KC_NO, KC_TRNS, RGB_TOG, KC_NO, KC_NO, KC_F9, KC_F10, KC_F11, KC_F12, KC_NO, 
-        KC_NO, KC_NO, KC_NO, KC_NO, KC_TRNS, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO)
+        KC_NO, RGB_SPI, RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI,                         KC_NO, KC_F1, KC_F2, KC_F3, KC_F4, KC_NO, 
+        KC_NO, RGB_SPD, RGB_RMOD, RGB_HUD, RGB_SAD, RGB_VAD,                        KC_NO, KC_F5, KC_F6, KC_F7, KC_F8, KC_NO, 
+        KC_NO, RGB_M_P, RGB_M_B, RGB_M_R, RGB_M_G, RGB_M_T, KC_NO, KC_TRNS,         RGB_TOG, KC_NO, KC_NO, KC_F9, KC_F10, KC_F11, KC_F12, KC_NO, 
+        KC_NO, KC_NO, KC_NO, KC_NO, KC_TRNS,                                        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO)
 
 
 // /*
