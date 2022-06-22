@@ -39,8 +39,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 
     [_SYMBOL] = LAYOUT(
-        KC_RBRC, LSFT(KC_4), LSFT(KC_SLSH), RALT(KC_LBRC), RALT(KC_RBRC), KC_EQL,               LSFT(KC_RBRC), KC_NUBS, LSFT(KC_NUBS), LSFT(KC_0), LSFT(KC_6), MACRO_0, 
-        KC_NO, RALT(KC_NUBS), LSFT(KC_7), RALT(KC_QUOT), RALT(KC_NUHS), LSFT(KC_3),             LSFT(KC_MINS), LSFT(KC_8), LSFT(KC_9), KC_SLSH, LSFT(KC_DOT), RALT(KC_2), 
+        MACRO_1, LSFT(KC_4), LSFT(KC_SLSH), RALT(KC_LBRC), RALT(KC_RBRC), KC_EQL,               LSFT(KC_RBRC), KC_NUBS, LSFT(KC_NUBS), LSFT(KC_0), LSFT(KC_6), MACRO_0, 
+        KC_RBRC, RALT(KC_NUBS), LSFT(KC_7), RALT(KC_QUOT), RALT(KC_NUHS), LSFT(KC_3),             LSFT(KC_MINS), LSFT(KC_8), LSFT(KC_9), KC_SLSH, LSFT(KC_DOT), RALT(KC_2), 
         KC_TRNS, RALT(KC_3), KC_NUHS, RALT(KC_7), RALT(KC_EQL), LSFT(KC_EQL), KC_NO, KC_NO,     KC_NO, KC_NO, LSFT(KC_1), LSFT(KC_5), LSFT(KC_2), KC_MINS, LSFT(KC_COMM), KC_NO,
         KC_TRNS, KC_NO, KC_NO, KC_NO, KC_NO,                                                    KC_NO, KC_NO, KC_NO, KC_TRNS, KC_NO),
 
@@ -85,7 +85,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     if (record->event.pressed) {
         switch (keycode) {
             case MACRO_0:
-                SEND_STRING(SS_DOWN(X_LSFT)SS_TAP(X_EQL)SS_UP(X_LSFT)SS_TAP(X_SPC));
+                SEND_STRING(SS_DOWN(X_LSFT)SS_TAP(X_EQL)SS_UP(X_LSFT)SS_TAP(X_SPC));  // prints backtick ` with one keystroke
+                return false;
+            case MACRO_1:
+                SEND_STRING(SS_TAP(X_EQL)SS_TAP(X_SPC));  // prints ^ with one keystroke
                 return false;
         }
     }
